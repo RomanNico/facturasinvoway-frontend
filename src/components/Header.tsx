@@ -23,7 +23,7 @@ const Header = () => {
     return (
         <div className="header-pro" id="main-header">
             <div className="header-left">
-                <img src="/logo.png" alt="Invo-way Logo" className="logo" />
+                <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Invo-way Logo" className="logo" />
                 <div>
                     <h1 style={{
                         fontSize: "20px",
