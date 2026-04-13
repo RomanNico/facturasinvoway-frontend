@@ -25,3 +25,9 @@ export const subirExcel = async (file: File) => {
 
     return res.data;
 };
+
+export const descargarExcel = async () => {
+    // Para descargas, a veces es mejor usar window.location o un link temporal 
+    // para que el navegador maneje la descarga del stream directamente.
+    window.open(`${api.defaults.baseURL}/facturas/excel`, "_blank");
+};

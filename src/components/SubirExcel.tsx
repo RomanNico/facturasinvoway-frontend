@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { subirExcel } from "../services/api";
+import { subirExcel, descargarExcel } from "../services/api";
 import LoadingModal from "./LoadingModal";
 
 interface UploadResult {
@@ -98,6 +98,23 @@ const SubirExcel = ({ onSuccess, onResult }: Props) => {
                         <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" />
                     </svg>
                     Subir y enviar alertas
+                </button>
+
+                <button
+                    className="button"
+                    onClick={() => descargarExcel()}
+                    id="btn-download-excel"
+                    style={{
+                        background: "var(--gradient-green)",
+                        boxShadow: "0 2px 8px rgba(16, 185, 129, 0.2)",
+                    }}
+                >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Descargar Reporte
                 </button>
             </div>
 

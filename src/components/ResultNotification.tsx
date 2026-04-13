@@ -93,6 +93,25 @@ const ResultNotification = ({ result, onClose }: Props) => {
                 </div>
             )}
 
+            {result.correos_enviados === -1 && (
+                <div style={{
+                    marginTop: "12px",
+                    padding: "8px 12px",
+                    borderRadius: "8px",
+                    background: "rgba(99, 102, 241, 0.06)",
+                    fontSize: "12px",
+                    color: "var(--text-secondary)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "6px",
+                }}>
+                    <span>⏳</span>
+                    <span>
+                        Enviando alertas a responsables en segundo plano...
+                    </span>
+                </div>
+            )}
+
             {result.correos_error > 0 && (
                 <div style={{
                     marginTop: "6px",
