@@ -36,6 +36,7 @@ export default function GraficaResponsables({ data, onResponsableClick }: Grafic
     ).map((r: any) => ({
         responsable: r.responsable,
         promedio: r.count > 0 ? Math.round(r.total / r.count) : 0,
+        cantidad: r.count,
     }));
 
     agrupado.sort((a: any, b: any) => b.promedio - a.promedio);
@@ -75,8 +76,16 @@ export default function GraficaResponsables({ data, onResponsableClick }: Grafic
                     fontSize: "12px",
                     color: getColor(d.promedio),
                     fontWeight: 700,
+                    marginBottom: "2px",
                 }}>
                     {d.promedio} días promedio
+                </div>
+                <div style={{
+                    fontSize: "11px",
+                    color: "var(--text-muted)",
+                    fontWeight: 500,
+                }}>
+                    {d.cantidad} {d.cantidad === 1 ? 'factura' : 'facturas'}
                 </div>
             </div>
         );

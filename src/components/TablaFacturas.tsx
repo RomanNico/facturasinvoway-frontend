@@ -173,6 +173,7 @@ const TablaFacturas = ({ facturas }: Props) => {
                                                 <th>Proveedor</th>
                                                 <th>Fecha Alta</th>
                                                 <th>Días Alta</th>
+                                                <th>Fecha UO</th>
                                                 <th>Días UO</th>
                                                 <th>Estado</th>
                                             </tr>
@@ -201,6 +202,7 @@ const TablaFacturas = ({ facturas }: Props) => {
                                                             {f.dias_alta ?? 0}
                                                         </span>
                                                     </td>
+                                                    <td>{formatearFecha(f.fecha_entrada)}</td>
                                                     <td>
                                                         <span style={{
                                                             fontWeight: 600,
